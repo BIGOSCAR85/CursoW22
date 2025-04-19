@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi primera pagina web</title>
+</head>
+
+<body>
+  <!-- Esto es un comentario-->
+  <!-- Esto es un comentario de varias lineas-->
+  <!-- Esto es otro comentario-->
+
+  <a href="#parrafoEjemplo">Ir a la seccion ID y Clase</a>
+
+  <!-- Parrafo-->
+  <p>Esto es un parrafo :D</p>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam nihil
+    labore ab a adipisci tempore quo assumenda perspiciatis natus, incidunt
+    earum consequatur eius vitae id sequi suscipit doloribus error
+    praesentium.
+  </p>
+
+  <!-- Titulares-->
+  <h1>Soy un titulo</h1>
+  <h2>Soy un subtitulo</h2>
+  <h3>Soy un subtitulo</h3>
+  <h4>Soy un subtitulo</h4>
+  <h5>Soy un subtitulo</h5>
+  <h6>Soy un subtitulo</h6>
+
+  <!-- Imagen en nuestra computadora-->
+  <img src="images/programaciondigital.jpg" alt="Lenguajes de programacion" id="programacion" />
+  <img src="images/programaciondigital.jpg" alt="Lenguajes de programacion" width="500px" height="300px" />
+
+  <!-- Imagen (Url, es decir que este en internet)-->
+  <img
+    src="https://media.istockphoto.com/id/517188688/es/foto/paisaje-de-monta%C3%B1a.jpg?s=612x612&w=0&k=20&c=EnSd5sJdxih_svZHscQ5Hfzr3RSOdXO9MpdmKK4CMTs="
+    alt="Paisaje" />
+
+  <!-- Video (youtube) iframe -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/gqYGj-fDD_I?si=Mw8sOZynQ16TGlyP"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <!-- Ubicacion de Google maps-->
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.8078696117946!2d-65.82647322408472!3d10.277059242043158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2c82254b0b4a97%3A0xa0a6132e949b84e6!2sPlaya%20nudista%20Miami%20-%20Parque%20Nacional%20Laguna%20de%20Tacarigua!5e0!3m2!1ses-419!2sve!4v1741827095858!5m2!1ses-419!2sve"
+    width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  <!-- Video (desde nuestra computadora)-->
+  <video controls autoplay muted loop src="video/Education_People.mp4"></video>
+
+  <!-- Listas-->
+  <!-- Listas organizadas/ordenada-->
+  <ol>
+    <li>Tener todos los materiales</li>
+    <li>Mesclar materiales</li>
+    <li>Cocinarlos</li>
+  </ol>
+
+  <!-- Lista no organizada/ordenada-->
+  <ul>
+    <li>Javascript</li>
+    <li>Python</li>
+    <li>Php</li>
+  </ul>
+  </li>
+  </ul>
+  <!-- Tabla-->
+  <table>
+    <!--Cabecera de la tabla-->
+    <thead>
+      <tr>
+        <th>
+          Nombre
+        </th>
+        <th>Apellido</th>
+        <th>Edad</th>
+      </tr>
+    </thead>
+    <!-- Datos de la tabla-->
+    <!-- Esto representa una fila de datos-->
+    <tr>
+      <td>Jose</td>
+      <td>Perez</td>
+      <td>20</td>
+    </tr>
+    <!-- Esto representa una fila de datos-->
+    <tr>
+      <td>Luis</td>
+      <td>Lopez</td>
+      <td>25</td>
+    </tr>
+    <!-- Esto representa una fila de datos-->
+    <tr>
+      <td>Oscar</td>
+      <td>Alvarez</td>
+      <td>39</td>
+    </tr>
+  </table>
+
+  <!-- Boton-->
+  <button>Clic aqui</button>
+
+  <!-- Ancla (Link)-->
+  <a href="https://www.youtube.com" target="_blank">Ir a Youtube</a>
+  <a href="https://www.google.com" target="_blank">
+    <button>Ir a Google</button>
+  </a>
+
+  <a href="pages/contacto.html">Contactanos</a>
+
+  <!-- Descargar archivo -->
+  <a href="images/programaciondigital.jpg" download="Programaciondigital.jpg">Descargar imagen</a>
+
+  <!-- Id y Clase -->
+  <p id="parrafoEjemplo">Soy un identificador</p>
+
+  <p class="rojo grande">Ejemplo de clase</p>
+  <p class="rojo grande">Ejemplo de clase 2</p>
+
+  <a href="#programacion">Ir a los lenguajes</a>
+
+  <!-- Inputs (Entradas de texto) -->
+  <!-- Input de texto -->
+  <input type="text" placeholder="Escribe tu nombre" name="nombre" minlength="2" maxlength="20" value="Oscar" readonly
+    disabled>
+  <!-- Input de numero-->
+  <input type="number" name="edad" id="edad">
+  <!-- Input de Correo Electronico-->
+  <input type="email" name="correro" id="correo">
+  <!-- Input de fecha-->
+  <input type="date" name="fecha" id="fecha" min="2003-01-01" max="2025-01-01">
+  <!-- Input de color-->
+  <input type="color" name="color" id="color">
+  <!-- Input Checkbox-->
+  <label for="terminos">
+    <input type="checkbox" name="terminos" id="terminos">
+    Aceptar los terminos y condiciones.
+  </label>
+  <!-- Input radio -->
+  <label for="bus">
+    <input type="radio" name="transporte" id="bus">
+    Bus
+  </label>
+  <label for="car">
+    <input type="radio" name="transporte" id="car">
+    Car
+  </label>
+  <br>
+  <!-- Input de botones -->
+  <input type="button" value="Enviar">
+  <input type="submit" value="Enviar datos">
+  <input type="reset" value="Resetear">
+
+  <!-- Salto de linea -->
+  <br>
+  <br>
+  <br>
+  <!-- Formulario -->
+  <form action="">
+    <!-- Nombre-->
+    <label for="name">Nombre</label>
+    <input type="text" name="name" id="name">
+
+    <!-- Apellido -->
+    <label for="lastname">Apellido</label>
+    <input type="text" name="lastname" id="lastname">
+
+    <!-- Correo electronico -->
+    <label for="email">Correo electronico</label>
+    <input type="email" name="email" id="email">
+
+    <!-- Input de seleccion -->
+    <label for="pais">Pais</label>
+    <select name="" id="">
+      <option value="" selected disabled>Seleccione un pais</option>
+      <option value="+58">Venezuela</option>
+      <option value="">Colombia</option>
+      <option value="">Italia</option>
+      <option value="">Argentina</option>
+    </select>
+
+    <!-- Textarea -->
+    <label for="descripcion">Descripcion</label>
+    <textarea name="descripcion" id="descripcion" rows="5" cols="10"></textarea>
+
+    <!-- Input oculto -->
+    <input type="hidden" name="oculto" value="loquesea">
+    <br>
+
+    <!-- Input de contrasena -->
+    <label for="">Contrasena</label>
+    <input type="password" name="password" id="password">
+
+    <!-- Boton para enviar el formulario -->
+    <input type="submit" value="Enviar datos">
+  </form>
+
+  <!-- div (division, caja, contenedor, cajita) -->
+  <div style="background-color: gray;">
+    <h3>Soy un div</h3>
+    <p>Hola desde el div</p>
+  </div>
+
+  <!-- Span -->
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span style="color: blue;"> nobis, officiis cum, vitae
+      omnis minima nam natus delectus ut molestiae labore provident fuga!</span> Nam magni iste accusantium animi porro
+    reprehenderit?</p>
+
+  <!-- HTML SEMANTICO -->
+  <!-- Encabezado -->
+  <header></header>
+  <!-- Barra de navegacion -->
+  <nav></nav>
+  <!-- Contenido lateral -->
+  <aside></aside>
+  <!-- Contenido principal -->
+  <main>
+    <h1>Soy el titulo</h1>
+    <button>Conocer mas</button>
+  </main>
+  <!-- Articulo -->
+  <article></article>
+  <!-- Direccion -->
+  <address></address>
+  <!-- Secciones -->
+  <section></section>
+  <!-- Pie de pagina -->
+  <footer></footer>
+</body>
+
+</html>
