@@ -1,0 +1,134 @@
+/* MARGIN */
+.margen{
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    /* MARGIN */
+    /* margin-top : MARGEN EN LA PARTE SUPERIOR 
+    margin-top: 20px;
+    margin-right : MARGEN EN LA PARTE DERECHA 
+    margin-right: 20px;
+    margin-left : MARGEN EN LA PARTE IZQUIERDA
+    margin-left: 20px;
+    margin-bottom: MARGEN EN LA PARTE INFERIOR 
+    margin-bottom: 20px;*/
+    margin: 20px 20px 20px 20px;
+  }
+  
+  /* PADDING : BASICAMENTE ES UN MARGEN PERO INTERNO */
+  
+  #padding{
+    height: 600px;
+    background-color: black;
+    /* padding */
+    padding: 20px 50px 50px 100px;
+  }
+  
+  #padding section{
+    width: 300px;
+    height: 300px;
+    background: gray;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  
+  #padding section button{
+    font-size: 25px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: orange;
+    color: rgb(37, 37, 37);
+    font-weight: 900;
+  }
+  
+  /* Pseudo Class */
+  /* link : Nos permite modificar los estilos de un enlace no visitado */
+  #pseudoclases a:link{
+    color: green;
+  }
+  
+  /* visited : Nos permite modificar los estilos de un enlace visitado */
+  #pseudoclases a:visited{
+    color: red;
+  }
+  
+  /* hover: Nos permite modificar los estilos de un elemento cuando  el cursor este por encima del elemento */
+  #pseudoclases button:hover{
+    background-color: purple;
+    color: white;
+    /* cursor */
+    cursor: pointer;
+  }
+  
+  /* focus: Nos permite modificar los estilos de un elemento cuando el usuario este haciendo focus sobre el elemento */
+  #pseudoclases input:focus{
+    background-color: aqua;
+    border: none;
+    color: rgb(223, 115, 26);
+  }
+  
+  /* first-child (Primer hijo del elemento) */
+  #pseudoclases2 p:first-child{
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+  }
+  
+  /* last-child (Ultimo hijo del elemento) */
+  #pseudoclases2 p:last-child{
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+  }
+  
+  /* nth-child(numero del hijo) */
+  #pseudoclases2 p:nth-child(6){
+    font-size: 20px;
+    font-weight: bold;
+    color: purple;
+  }
+  
+  /* PSEUDO ELEMENTS */
+  /* first-line : Esto afecta la primera linea */
+  #pseudoelementos p::first-line{
+    color: blue;
+  }
+  
+  /* first-letter : Afecta la primera letra */
+  #pseudoelementos p::first-letter{
+    color: red;
+    font-size: 30px;
+  }
+  
+  /* before (antes) / after (despues) */
+  #pseudoelementos p::before{
+    content: "👀";
+  }
+  
+  #pseudoelementos p::after{
+    content: "💓";
+  }
+  
+  /* marker = Nos permite modificar la lista */
+  #pseudoelementos ul li::marker{
+    content: "♦️";
+  }
+  
+  /* selection */
+#pseudoelementos p::selection{
+  background-color: chartreuse;
+  color: white;
+}
+
+/* box-shadow */
+#sombras{
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  /* box-shadow */
+  /* primerValor: Eje X, segundoValor : Eje Y, tercervalor: desenfoque, cuartoValor: color */
+  box-shadow: 20px 20px 20px black;
+}

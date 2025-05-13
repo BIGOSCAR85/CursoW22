@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing */
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  header{
+    background-color: rgb(40, 40, 40);
+    color: white;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    padding: 0px 50px;
+    /* FLEXBOX */
+    display: flex;
+    /* justify-content : EJE X */
+    /* align-items : EJE Y */
+    /* flex-direction: PODEMOS INDICAR SI LOS ELEMENTOS ESTARAN EN FILA O EN COLUMNA */
+    justify-content: space-between;
+    align-items: center;
+    /*flex-direction: column;*/
+  }
+  
+  header p{
+    font-weight: 900;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  header p:hover{
+    color: orange;
+  }
+  
+  header ul li:hover{
+    cursor: pointer;
+    color: orange;
+  }
+  
+  header ul{
+    display: flex;
+    /* Para separar entre elementos, utilizamos gap */
+    gap: 50px;
+    list-style: none;
+    font-weight: 700;
+  }
+  
+  main{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url("https://wallpapers.com/images/hd/1920x1080-hd-sports-dqdv0c60acjkrwr7.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  main h1{
+    font-size: 50px;
+    color: white;
+  }
+  
+  main button{
+    padding: 10px 30px;
+    font-size: 23px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 700;
+  }
+  
+  main button:hover{
+    background-color: orange;
+    color: rgb(40, 40, 40);
+    cursor: pointer;
+  }
+  
+  #publicidad{
+    height: 300px;
+    background-color: rgb(10, 10, 10);
+  }
+  
+  
+  #entrenamientos{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://grupopineda.eu/wp-content/uploads/2022/03/shutterstock_1912601503.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  #entrenamientos h1{
+    font-size: 50px;
+    color: white;
+  }
+  
+  #entrenamientos div{
+    display: flex;
+    gap: 30px;
+  }
+  
+  #entrenamientos div article{
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: green;
+  }
+  
+  footer{
+    height: 250px;
+    background-color: rgb(40, 40, 40);
+  }
