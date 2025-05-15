@@ -1,0 +1,17 @@
+/* display */
+#div1{
+  /*display: none;*/
+  display: block;
+}
+
+#div1 ul li{
+  display: inline;
+}
+
+#div1 img{
+  display: block;
+}
+
+#div2 span{
+  display: inline;
+}
