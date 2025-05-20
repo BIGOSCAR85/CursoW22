@@ -1,0 +1,71 @@
+main{
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+/* ANIMACIONES */
+
+main div{
+  width: 200px;
+  height: 200px;
+}
+
+main div:nth-child(1){
+  background-color: red;
+  /* animation-name 
+  animation-name: ejemplo;
+  animation-duration 
+  animation-duration: 5s;
+  /* animation-delay 
+  animation-delay: 0s;
+  /* animation-iteraction-count 
+  animation-iteration-count: 2;
+  /* animation-fill-mode 
+  animation-fill-mode: both;
+  /* animation-direction 
+  animation-direction: alternate;
+  /* animation-play-state 
+  animation-play-state: running;*/
+  animation: ejemplo 5s 0s 2 both alternate;
+}
+
+main div:nth-child(2){
+  background-color: green;
+  animation: rotar 2s 0s infinite both alternate-reverse;
+  transition: all 1s 0s linear;
+}
+
+main div:nth-child(2):hover{
+  border: 10px solid red;
+}
+
+/* CREAR LA ANIMACION (VAMOS A UTILIZAR DECORADOR @) */
+@keyframes ejemplo{
+  0%{
+    background-color: blue;
+  }
+
+  50%{
+    background-color: yellow;
+  }
+
+  100%{
+    background-color: rgb(162, 0, 255);
+  }
+}
+
+@keyframes rotar{
+  0%{
+    transform: rotate(0deg) scale(1);
+    background-color: green;
+  }
+
+  100%{
+    transform: rotate(360deg) scale(1.5);
+    background-color: aqua;
+  }
+}

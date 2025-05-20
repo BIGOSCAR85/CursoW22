@@ -1,0 +1,24 @@
+div{
+    height: 100vh;
+    background-color: black;
+  }
+  
+  /* RESPONSIVE : NOS PERMITE ADAPTAR NUESTRA PAGINA A DIFERENTES RESOLUCIONES */
+  
+  @media only screen and (min-width: 700px){
+    div{
+      background-color: blue;
+    }
+  }
+  
+  @media only screen and (max-width: 600px){
+    div{
+      background-color: yellow;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px){
+    div{
+      background-color: purple;
+    }
+  }

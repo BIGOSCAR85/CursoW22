@@ -1,0 +1,259 @@
+/* ESTO ES UN COMENTARIO*/
+
+
+/* SELECTORES */
+/* SELECTOR POR ETIQUETA HTML (ESTE SELECTOR ES EN GRUPO) ES DECIR SE APLICA TODOS LOS ESTILOS A LA ETIQUETA CON ESE NOMBRE*/
+
+h2{
+    color: greenyellow;
+}
+
+/* SELECTOR POR ID (ESTE SELECTOR ES UNICO, ES DECIR COMO UNA CEDULA) */
+#subtitulo{
+    color: blue;
+}
+#subtitulo2{
+    color: aqua;
+}
+
+/* SELECTOR POR CLASE (ESTE SELECTOR ES EN GRUPO) */
+.textgreen{
+    color: green;
+}
+.fondorojo{
+    background-color: red;
+}
+
+/* SELECTOR POR GRUPO */
+#subtitulo3, #subtitulo4{
+    color: deeppink;
+}
+
+/* SELECTOR POR ANIDAMIENTO */
+#divisionone span{
+    color: dodgerblue;
+}
+
+/* SELECTOR UNIVERSAL */
+/**{
+    background-color: black;
+}*/
+
+/* VARIABLES = SON UN ESPACIO EN MEMORIA */
+:root{
+    --color-favorito: rgb(226, 190, 47);
+    --color-secundario: rgb(42, 42, 212);
+}
+
+main, aside{
+    color: var(--color-favorito);
+    background-color: var(--color-secundario);
+}
+
+/* PROPIEDADES CSS PARA TEXTOS */
+section h1{
+    /* color : PERMITE DARLE COLOR A UN TEXTO */
+    color: red;
+    /* font-size : PERMITE DARLE UN TAMANO AL TEXTO */
+    font-size: 20px;
+    /* font-weight : PERMITE DARLE UN GROSOR AL TEXTO */
+    font-weight: 900;
+    /* font-family : PERMITE CAMBIAR LA FUENTE DEL TEXTO */
+    font-family: sans-serif;
+    /* text-align : PERMITE CAMBIAR LA POSICION DEL TEXTO */
+    text-align: justify;
+    /* text-decoration : PERMITE CAMBIAR LA DECORACION DEL TEXTO */
+    /*text-decoration-line: line-through;
+    text-decoration-color: blue;
+    text-decoration-style: double;
+    text-decoration-thickness: 3px;*/
+    text-decoration: line-through blue solid 3px;
+    /* text-transform : PERMITE CAMBIAR DE MAYUSCULAS A MINUSCULAS  */
+    text-transform: uppercase;
+    /* tezt-indent : PERMITE CAMBIAR LA IDENTACION */
+    text-indent: 20px;
+    /* letter-spacing : PERCMITE CAMBIAR EL ESPACIO ENTRE LETRAS */
+    letter-spacing: 2px;
+    /* line-height : PERMITE CONTROLAR EL ESPACIO ENTRE LINEAS */
+    line-height: 30px;
+    /* word-spacing : PERMITE CONTROLAR EL ESPACIO ENTRE PALABRAS */
+    word-spacing: 30px;    
+}
+
+section a{
+    text-decoration: none;
+    font-size: 30px;
+    /* text-shadow : PERMITE CONTROLAR LA SOMBRA DEL TEXTO */
+    /* text-shadow: x y desenfoque color*/
+    text-shadow: 2px 2px 10px rgb(54, 219, 54);
+}
+
+section ul{
+    /* list-style : PERMITE MODIFICAR EL ESTILO DE LA LISTA */
+    list-style: circle;
+}
+
+/* TAMANOS */
+#tamano{
+    /* width : NOS PERMITE DARLE UN VALOR A LA ANCURA DEL ELEMENTO */
+    width: 400px;
+    /* height : NOS PERMITE DARLE UN VALOR A LA ALTURA DEL ELEMENTO */
+    height: 400px;
+    /* max-width : NOS PERMITE COLOCAR UN LIMITE DE ANCHURA */
+    max-width: 500px;
+    /* min-width : NOS PERMITE COLOCAR UN MINIMO DE ANCHURA */
+    min-width: 200px;
+    /* max-height : NOS PERMITE COLOCAR UN LIMITE A LA ALTURA */
+    max-height: 500px;
+    /* min-height : NOS PERMITE COLOCAR UN MINIMO A LA ALTURA */
+    min-height: 300px;
+    background-color: green;
+}
+
+#tamano img{
+    width: 400px;
+}
+
+/* UNIDADES DE MEDIDA */
+/*
+- em (se basa en el tamano de fuente del elemento padre)
+- rem (se basa en el tamano de fuente del elemento raiz del documento)
+- vw (viewport width)
+- vh (viewport height)
+- %
+- vmin (viewport minimo)
+- vmax (viewport maximo)
+- px (pixeles)
+- auto (automatico)
+*/
+
+/* DE MANERA PREDETERMINADA MI PARRAFO TIENE UN TAMANO DE 16px  */
+#umedida{
+    font-size: 16px;
+  }
+  
+  #umedida p{
+    /*1.5em; 2em es igual a 16x2 = 32px | 16px + 16px + 16px = 3em*/
+    font-size: 1.5rem;
+  }
+  
+  #viewportest{
+    width: 50vw /*50% DE ANCHURA DEL VIEWPORT WIDTH*/;
+    height: 80vh /* 80% DE ALTURA DEL VIEWPORT HEIGHT */;
+    background-color: blue;
+  }
+  
+  #porcentaje{
+    height: 500px;
+    background-color: purple;
+  }
+  
+  #porcentaje div{
+    /* PORCENTAJE */
+    width: 50%;
+    height: 20%;
+    background-color: green;
+  }
+  
+  #viewportmaxmin{
+    /* VIEWPORT MIN Y MAX */
+    width: 50vmin;
+    height: 50vmax;
+    background-color: deepskyblue;
+  }
+  
+  #auto{
+    background-color: yellow;
+    height: auto;
+    width: auto;
+    color: white;
+  }
+  
+  #auto div{
+    background-color: #6fd6ff;
+    width: auto;
+  }
+  
+  /* BACKGROUND (fondo) */
+  #fondo{
+    height: 300px;
+    /*background-color: Nos permite colocar un color de FONDO*/
+    /* RGBA: R (red) G (green) B (blue) A (Alpha) */
+    /* Los valores del RGB van desde el 0 - 255 */
+    /* el alpha va de 0 - 1 */
+    /*background-color: rgba(255,0,255,0.7);*/
+    /*
+    HEXADECIMAL
+    0 = 0 = 0
+    1 = 1
+    2 = 2
+    3 = 3
+    4 = 4
+    5 = 5
+    6 = 6
+    7 = 7
+    8 = 8
+    9 = 9
+    A = 10
+    B = 11
+    C = 12
+    D = 13
+    E = 14
+    F = 15 = 255
+  
+    background-color: #0000ff;  #RGB 
+  
+    Covertir de hexadecimal a RGB
+    #ff5733
+    R = (15 * 16) + 15 = 255
+    G = (5 * 16) + 7 = 87
+    B = (3 * 16) + 3 = 51
+    */
+  
+    /*background-color: #ff5733;
+    background-color: rgb(255,87,51);*/
+    
+    /* background-image : Nos permite colocar una imagen de fondo */
+    /* Ruta de imagen desde internet 
+    background-image: url("https://cdn.pixabay.com/photo/2021/09/20/23/03/car-6642036_1280.jpg");*/
+    /* RUTA LOCAL */
+    /*background-image: linear-gradient(to top, red, blue, yellow),url('../images/programaciondigital.jpg');*/
+    /*background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),url('../images/programaciondigital.jpg');*/
+    background-image: linear-gradient(50deg, red, blue, yellow),url('../images/programaciondigital.jpg');
+  }
+  
+  #fondo2{
+    height: 100vh;
+    background-image: url("https://images.vexels.com/content/130970/preview/hipster-male-character-2-8ab29b.png"), linear-gradient(to top, red, transparent), url("https://static.vecteezy.com/system/resources/previews/026/775/963/non_2x/colorfull-cartoon-lanscape-scene-natur-park-sunset-vector.jpg");
+    /* background-repeat: Nos permite controlar si la imagen de fondo se repite */
+    background-repeat: no-repeat, no-repeat, no-repeat ;
+    /* background-size: Nos permite controlar el tamano de la imagen*/
+    background-size: 500px /*200px*/, cover, cover;
+    /* background-position: Nos permite controlar la posicion de la imagen de fondo */
+    background-position: /*200px 0px*/ bottom, center, center;
+    /* background-attachment : Permite fijar el fondo*/
+    background-attachment: fixed, scroll, scroll;
+  }
+  
+  /* BORDES */
+  
+  #bordes{
+    height: 600px;
+    background-color: gray;
+  }
+  
+  #bordes section{
+    width: 300px;
+    height: 300px;
+    background: purple;
+    /* border */
+    /* border-style 
+    border-style: double;
+    border-width
+    border-width: 20px;
+    border-color
+    border-color: rgb(154, 154, 154);*/
+    border: double 10px rgb(4, 255, 0);
+    /* border-radius */
+    border-radius: 50px 20px 40px 5px;
+  }
