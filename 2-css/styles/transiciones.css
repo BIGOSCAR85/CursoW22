@@ -1,0 +1,31 @@
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    gap: 20px;
+  }
+  
+  main button{
+    padding: 20px 45px;
+    border: 0;
+    border-radius: 30px;
+    background-color: purple;
+    color: white;
+    font-size: 30px;
+    /* transiciones */
+    /* transition-property : Nos permite indicar cual es la propiedad que le quemos aplicar la transicion */
+    /*transition-property: all;*/
+    /* transition-duration: Nos permite indicar el tiempo de duracion de la transicion */
+    /*transition-duration: 2s;*/
+    /* transition-timing-function: Nos permite controlar la curva de velocidad */
+    /*transition-timing-function: linear;*/
+    /* transition-delay : Nos permite agregar un retraso en la transicion */
+    transition: all 2s linear 0s;
+  }
+  
+  main button:hover{
+    background-color: red;
+    font-size: 40px;
+  }

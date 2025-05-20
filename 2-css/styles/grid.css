@@ -1,0 +1,20 @@
+/* GRID = GRILLA */
+main{
+  height: 100vh;
+  /*grid*/
+  display: grid;
+  /* grid-template-columns : Permite definir columnas */
+  /*grid-template-columns: 200px 100px 300px auto;*/
+  grid-template-columns: repeat(4, 1fr); /* podemos definir 4 columnas del mismo tamano */
+  /* grid-template-rows : Permite definir filas */
+  /*grid-template-rows: 100px 500px 50px auto;*/
+  grid-template-rows: repeat(4, 1fr); /* podemos definir 4 filas del mismo tamano */
+  /* row-gap : Espaciado entre las filas */
+  row-gap: 20px;
+  /* column-gap : Espaciado entre columnas */
+  column-gap: 30px;
+}
+
+main div{
+  border: 3px solid red;
+}
