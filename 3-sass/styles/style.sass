@@ -1,0 +1,167 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: sans-serif
+
+/* COMENTARIO DE VARIAS LINEAS */
+// ESTO TAMBIEN ES UN COMENTARIO
+// ESTO ES OTRO COMENTARIO
+
+// LAS VARIABLES EN SASS (espacio en memoria)
+$colorPrincipal: blue
+$tamanoPrincipal: 500px
+$fuentePrincipal: 50px
+$fuenteFamilia : 'sans-serif'
+
+// ANIDAMIENTO (Nos permite seleccionar de la estructura de los hijos de un elemento)
+
+main
+  width: $tamanoPrincipal
+  height: $tamanoPrincipal
+  background-color: $colorPrincipal
+  color: white
+  &:hover
+    background-color: yellow
+  h1
+    font-size: $fuentePrincipal
+  p
+    color: purple
+
+// LOS MIXIN (CON Y SIN PARAMETROS): SON FRAGMENTOS DE CODIGO QUE SE PUEDEN REUTILIZAR
+@mixin my-mixin($color, $colorTexto)
+  padding: 10px 25px
+  border: 0
+  border-radius: 20px
+  background-color: $color
+  color: $colorTexto
+
+main
+  .aceptar
+    @include my-mixin(green, black)
+  .eliminar
+    @include my-mixin(red, white)
+
+@mixin flexbox($direccion:row, $justify:center, $align:center, $gap:0px)
+  display: flex
+  flex-direction: $direccion
+  justify-content: $justify
+  align-items: $align
+  gap: $gap
+
+.section
+  height: 400px
+  background-color: purple
+  //@include flexbox($gap: 20px, $justify: space-between, $direccion: column)
+  @include flexbox(column, space-between, center, 20px)
+  div
+    width: 100px
+    height: 100px
+    background-color: yellow
+    border: 1px solid black
+  
+// BEM (BLOCK, ELEMENT, MODIFIER)
+// Sass permite el operador & para poder abreviar al hacer referencia al selector padre
+// El metodo BEM nos permite hacer referencia a los elementos dentro de un bloque
+// Divide las clases en tres partes: bloque, elemento y modificador
+
+.header
+  background-color: gray
+  &__titulo
+    font-size: 40px
+    color: white
+  &__boton
+    padding: 10px 20px
+    border: 0
+    color: white
+    &--red
+      background-color: red
+    &--green
+      background-color: green
+
+// @extend : Nos permite reutilizar estilos de otros selectores
+.boton_secundario
+  background-color: blue
+  @extend .header__boton
+
+// CONDICIONALES @if (Nos permite colocar la condicion, y colocar el bloque de codigo que se ejecuta si la condicion es verdadera) @else (Si en el if no se cumple la condicion (false) se ejecuta el else (bloque de codigo) ) @else if (Else if se ejecuta si el @if es falso)
+
+// OPERADORES:
+// == (igualdad) por ejemplo: 1 == 1 (True)
+// != (Desigualdad) por ejemplo: 1 != 2 (True)
+// > (Mayor que) por ejemplo: 1 > 2 (False)
+// < (Menor que) por ejemplo: 1 < 2 (True)
+// >= (Mayor o igual) por ejemplo: 1 >= 2 (False)
+// <= (Menor o igual) por ejemplo: 2 <= 2 (True)
+$numero : 9
+
+h4
+  font-size: 30px
+  @if 2 == 1  
+    color: blue
+  @else if 5 > 10
+    color: yellow
+  @else if $numero != 10
+    color: purple
+  @else 
+    color: red
+  @if 5 == 5
+    background-color: yellow
+  
+// INTERPOLAR (Nos permite colocar variables en el codigo) #{$variable}
+
+@mixin boton($nombre, $propiedad1, $valor1, $propiedad2, $valor2)
+  .boton-#{$nombre} // .boton-inicio .boton-aceptar
+    @if $propiedad1 == color
+      #{$propiedad1}: $valor1 // color: purple
+    @else
+      color: blue
+    @if $propiedad2 == padding
+      #{$propiedad2}: $valor2 // padding: 10px
+    @else 
+      padding: 20px 30px
+
+@include boton('inicio', color, green, padding, 20px)
+@include boton('final', margin, red, background-color, 30px)
+
+// BUCLES
+
+// @for ----> 1 - 10 | 1 - 20 | 0 - 2 | 5 - 10
+@for $contador from 1 through 5
+  .division-#{$contador} // .division-1 .division-2 .division-3 .division-4 .division-5
+    width: 100px
+    height: 200px
+    margin-bottom: 20px
+    background-color: red
+    @if $contador == 3
+      background-color: green
+    @if $contador == 5
+      background-color: blue
+
+// @each ----> Nos permite recorrer una lista
+$colors : red, green, blue
+
+@each $color in $colors
+  .bg-#{$color} // .bg-red
+    width: 100px
+    height: 300px
+    background-color: $color
+
+// mapas (objeto)
+$temas : (primario: blue, secundario: green, resaltado: yellow)
+
+@each $nombre, $color in $temas
+  .#{$nombre} // .primario .secundario .resaltado
+    height: 100px
+    margin-top: 20px
+    background-color: $color
+
+// FUNCIONES EN SASS ---> ES UNA CAJITA DE HERRAMIENTA QUE NOS RETORNA UN VALOR
+
+@function degradado($color1:black, $color2:black, $direccion: to left)
+  @return linear-gradient($direccion, $color1, $color2)
+
+.contenedor
+  width: 100%
+  height: 100vh
+  background: degradado(red, purple, to right)

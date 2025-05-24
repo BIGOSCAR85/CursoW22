@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  /* COMENTARIO DE VARIAS LINEAS */
+  main {
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+    color: white;
+  }
+  main:hover {
+    background-color: yellow;
+  }
+  main h1 {
+    font-size: 50px;
+  }
+  main p {
+    color: purple;
+  }
+  
+  main .aceptar {
+    padding: 10px 25px;
+    border: 0;
+    border-radius: 20px;
+    background-color: green;
+    color: black;
+  }
+  main .eliminar {
+    padding: 10px 25px;
+    border: 0;
+    border-radius: 20px;
+    background-color: red;
+    color: white;
+  }
+  
+  .section {
+    height: 400px;
+    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  .section div {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+  }
+  
+  .header {
+    background-color: gray;
+  }
+  .header__titulo {
+    font-size: 40px;
+    color: white;
+  }
+  .header__boton, .boton_secundario {
+    padding: 10px 20px;
+    border: 0;
+    color: white;
+  }
+  .header__boton--red {
+    background-color: red;
+  }
+  .header__boton--green {
+    background-color: green;
+  }
+  
+  .boton_secundario {
+    background-color: blue;
+  }
+  
+  h4 {
+    font-size: 30px;
+    color: purple;
+    background-color: yellow;
+  }
+  
+  .boton-inicio {
+    color: green;
+    padding: 20px;
+  }
+  
+  .boton-final {
+    color: blue;
+    padding: 20px 30px;
+  }
+  
+  .division-1 {
+    width: 100px;
+    height: 200px;
+    margin-bottom: 20px;
+    background-color: red;
+  }
+  
+  .division-2 {
+    width: 100px;
+    height: 200px;
+    margin-bottom: 20px;
+    background-color: red;
+  }
+  
+  .division-3 {
+    width: 100px;
+    height: 200px;
+    margin-bottom: 20px;
+    background-color: red;
+    background-color: green;
+  }
+  
+  .division-4 {
+    width: 100px;
+    height: 200px;
+    margin-bottom: 20px;
+    background-color: red;
+  }
+  
+  .division-5 {
+    width: 100px;
+    height: 200px;
+    margin-bottom: 20px;
+    background-color: red;
+    background-color: blue;
+  }
+  
+  .bg-red {
+    width: 100px;
+    height: 300px;
+    background-color: red;
+  }
+  
+  .bg-green {
+    width: 100px;
+    height: 300px;
+    background-color: green;
+  }
+  
+  .bg-blue {
+    width: 100px;
+    height: 300px;
+    background-color: blue;
+  }
+  
+  .primario {
+    height: 100px;
+    margin-top: 20px;
+    background-color: blue;
+  }
+  
+  .secundario {
+    height: 100px;
+    margin-top: 20px;
+    background-color: green;
+  }
+  
+  .resaltado {
+    height: 100px;
+    margin-top: 20px;
+    background-color: yellow;
+  }
+  
+  .contenedor {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, red, purple);
+  }
+  
+  /*# sourceMappingURL=style.css.map */
