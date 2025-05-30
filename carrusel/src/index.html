@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Carousel</title>
+</head>
+<body class="flex flex-col min-h-screen bg-gradient-to-r from-blue-600 via-blue-800 to-blue-950 bg-opacity-80">
+
+  <main class="flex-grow relative">
+    <!-- 🌐 Navbar -->
+    <nav class="fixed top-0 left-0 right-0 bg-transparent border-b border-white/20 text-white z-50">
+      <div class="flex items-center justify-between w-full px-4 h-16 relative">
+        <!-- 🔵 Logo izquierdo -->
+        <a href="#" class="flex items-center space-x-3 flex-shrink-0 min-w-[180px] hover:bg-blue-800 rounded px-2 py-1 transition-colors duration-200">
+          <img src="./images/logo.jpg" class="h-8 rounded-full cursor-pointer" alt="Logo" />
+          <span class="text-2xl font-semibold whitespace-nowrap">Tuaeropuerto.com</span>
+        </a>
+
+        <!-- 🔍 Search -->
+        <div class="mx-4 flex-1 min-w-[200px] md:max-w-md lg:max-w-lg relative z-0">
+          <div class="relative rounded-full overflow-hidden shadow h-8 bg-center bg-contain bg-no-repeat" style="background-image: url('./images/logo-centro.png');">
+            <div class="absolute inset-0 flex items-center px-0 bg-white/20 rounded-full flex-row-reverse">
+              <img src="./images/lupa.png" alt="Buscar" class="h-4 w-4 object-contain mr-2" />
+              <input type="text" placeholder="Destinos, vuelos, aeropuertos..." class="w-full h-8 flex-grow bg-transparent outline-none text-sm text-white placeholder-gray-900 px-4 border border-white/40 hover:border-white focus:border-white transition-colors duration-300 rounded-full" />
+            </div>
+          </div>
+        </div>
+
+        <!-- 📱Right Menu -->
+        <div class="flex items-center space-x-4 flex-shrink-0 relative">
+          <!-- Mobile Toggle -->
+          <button type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg lg:hidden hover:bg-blue-600" id="menu-toggle" aria-expanded="false">
+            <span class="sr-only">Abrir menú</span>
+            <img src="./images/menu-hamburger-button.png" alt="Menú" class="h-6 w-6 object-contain rounded-full" />
+          </button>
+
+          <!-- ☰ Mobile Menu -->
+          <div id="mobile-menu" class="absolute hidden top-full right-4 mt-2 z-50 bg-white dark:bg-sky-700 rounded shadow-lg w-44 py-2 md:hidden">
+            <ul class="font-medium space-y-2 text-right text-gray-900 dark:text-white">
+              <li><a href="#" class="block py-2 px-3 hover:bg-blue-100 dark:hover:bg-gray-700">Inicio</a></li>
+              <li><a href="#" class="block py-2 px-3 hover:bg-blue-100 dark:hover:bg-gray-700">Destinos</a></li>
+              <li><a href="#" class="block py-2 px-3 hover:bg-blue-100 dark:hover:bg-gray-700">Boletos</a></li>
+              <li><a href="#" class="block py-2 px-3 hover:bg-blue-100 dark:hover:bg-gray-700">Check-in</a></li>
+            </ul>
+          </div>
+
+          <!-- 🖥️ Desktop Menu -->
+          <div class="hidden lg:block" id="navbar-desktop">
+            <ul class="font-medium flex flex-col md:flex-row rtl:space-x-reverse">
+              <li><a href="#" class="block py-2 px-3 hover:bg-blue-600 rounded">Inicio</a></li>
+              <li><a href="#" class="block py-2 px-3 hover:bg-blue-600 rounded">Destinos</a></li>
+              <li><a href="#" class="block py-2 px-3 hover:bg-blue-600 rounded">Boletos</a></li>
+              <li><a href="#" class="block py-2 px-3 hover:bg-blue-600 rounded">Check-in</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 🖼️ Carousel -->
+    <div id="carousel-example" class="relative w-full aspect-[16/9] max-h-[500px] overflow-hidden">
+      <div class="relative w-full h-full">
+        <!-- Slides -->
+        <div id="carousel-item-1" class="w-full h-full absolute transition-opacity duration-700 ease-in-out opacity-0">
+          <img src="./images/doha-airport.jpg" alt="Aeropuerto de Doha" class="w-full h-full object-cover object-center transform transition-transform duration-500 hover:scale-105 cursor-pointer" />
+        </div>
+        <div id="carousel-item-2" class="w-full h-full absolute transition-opacity duration-700 ease-in-out opacity-0">
+          <img src="./images/dubai-airport.jpg" alt="Aeropuerto de Dubái" class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105 cursor-pointer" />
+        </div>
+        <div id="carousel-item-3" class="w-full h-full absolute transition-opacity duration-700 ease-in-out opacity-0">
+          <img src="./images/estambul-airport.jpg" alt="Aeropuerto de Estambul" class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105 cursor-pointer" />
+        </div>
+        <div id="carousel-item-4" class="w-full h-full absolute transition-opacity duration-700 ease-in-out opacity-0">
+          <img src="./images/hamad-airport.jpg" alt="Aeropuerto de Hamad" class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105 cursor-pointer" />
+        </div>
+        <div id="carousel-item-5" class="w-full h-full absolute transition-opacity duration-700 ease-in-out opacity-0">
+          <img src="./images/paris-airport.jpg" alt="Aeropuerto de París" class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105 cursor-pointer" />
+        </div>
+        <div id="carousel-item-6" class="w-full h-full absolute transition-opacity duration-700 ease-in-out opacity-0">
+          <img src="./images/seul-airport.jpg" alt="Aeropuerto de Seúl" class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105 cursor-pointer" />
+        </div>
+      </div>
+
+      <!-- ⚪ Indicators -->
+      <div class="absolute bottom-5 left-1/2 z-50 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse">
+        <button id="carousel-indicator-1" class="h-3 w-3 rounded-full bg-white opacity-100 transition-opacity duration-300" aria-label="Slide 1"></button>
+        <button id="carousel-indicator-2" class="h-3 w-3 rounded-full bg-white opacity-40 transition-opacity duration-300" aria-label="Slide 2"></button>
+        <button id="carousel-indicator-3" class="h-3 w-3 rounded-full bg-white opacity-40 transition-opacity duration-300" aria-label="Slide 3"></button>
+        <button id="carousel-indicator-4" class="h-3 w-3 rounded-full bg-white opacity-40 transition-opacity duration-300" aria-label="Slide 4"></button>
+        <button id="carousel-indicator-5" class="h-3 w-3 rounded-full bg-white opacity-40 transition-opacity duration-300" aria-label="Slide 5"></button>
+        <button id="carousel-indicator-6" class="h-3 w-3 rounded-full bg-white opacity-40 transition-opacity duration-300" aria-label="Slide 6"></button>
+      </div>
+
+      <!-- ◀️Left arrow -->
+      <button id="data-carousel-prev" type="button" class="absolute left-2 top-1/2 z-50 -translate-y-1/2 focus:outline-none">
+        <img src="./images/arrow-left.png" alt="Anterior"
+          class="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 opacity-50 hover:opacity-80 transition-opacity filter invert brightness-200 cursor-pointer" />
+      </button>
+
+      <!-- ▶️ Right arrow -->
+      <button id="data-carousel-next" type="button" class="absolute right-2 top-1/2 z-50 -translate-y-1/2 focus:outline-none">
+        <img src="./images/arrow-right.png" alt="Siguiente"
+          class="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 opacity-50 hover:opacity-80 transition-opacity filter invert brightness-200 cursor-pointer" />
+      </button>
+    </div>
+  </main>
+
+  <!--🔻 Footer -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto flex flex-wrap justify-between gap-8 px-4 text-gray-400">
+      <!-- Column 1: Discover and buy -->
+      <div class="min-w-[200px]">
+        <h2 class="text-lg text-white font-semibold mb-2">Descubre y compra</h2>
+        <ul class="space-y-1 text-sm">
+          <li><a href="#" class="hover:text-blue-400">Alojamientos</a></li>
+          <li><a href="#" class="hover:text-blue-400">Alquiler de autos</a></li>
+          <li><a href="#" class="hover:text-blue-400">Tours y excursiones</a></li>
+          <li><a href="#" class="hover:text-blue-400">Asistencia al viajero</a></li>
+        </ul>
+      </div>
+      <!-- Column 2: Quick Links -->
+      <div class="min-w-[200px]">
+        <h2 class="text-lg text-white font-semibold mb-2">Enlaces rápidos</h2>
+        <ul class="space-y-1 text-sm">
+          <li><a href="#" class="hover:text-blue-400">Información legal</a></li>
+          <li><a href="#" class="hover:text-blue-400">Política de privacidad</a></li>
+          <li><a href="#" class="hover:text-blue-400">Artículos restringidos</a></li>
+          <li><a href="#" class="hover:text-blue-400">Plan de contingencia</a></li>
+          <li><a href="#" class="hover:text-blue-400">Relación con inversionistas</a></li>
+          <li><a href="#" class="hover:text-blue-400">Contáctanos</a></li>
+        </ul>
+      </div>
+      <!-- Column 3: Social networks -->
+      <div class="min-w-[200px]">
+        <h2 class="text-lg text-white font-semibold mb-3">¡Síguenos!</h2>
+        <div class="flex gap-4">
+          <a href="#" class="bg-sky-700 p-2 rounded-full hover:scale-110 transition-transform duration-300">
+            <img src="./images/footer/redes-facebook.png" alt="Facebook" class="h-6 w-6 object-contain" />
+          </a>
+          <a href="#" class="bg-sky-700 p-2 rounded-full hover:scale-110 transition-transform duration-300">
+            <img src="./images/footer/redes-instagram.png" alt="Instagram" class="h-6 w-6 object-contain" />
+          </a>
+          <a href="#" class="bg-sky-700 p-2 rounded-full hover:scale-110 transition-transform duration-300">
+            <img src="./images/footer/redes-x.png" alt="X" class="h-6 w-6 object-contain" />
+          </a>
+          <a href="#" class="bg-sky-700 p-2 rounded-full hover:scale-110 transition-transform duration-300">
+            <img src="./images/footer/redes-whatsapp.png" alt="WhatsApp" class="h-6 w-6 object-contain" />
+          </a>
+          <a href="#" class="bg-sky-700 p-2 rounded-full hover:scale-110 transition-transform duration-300">
+            <img src="./images/footer/redes-youtube.png" alt="YouTube" class="h-6 w-6 object-contain" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="container mx-auto mt-6 border-t border-gray-600 pt-4 text-sm text-gray-400">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+
+        <!-- Left: texts -->
+        <div class="flex flex-col md:flex-row items-center gap-2 md:gap-4 md:text-left text-center md:flex-1">
+          <p>Tuaeropuerto.com &copy; 2025 Todos los derechos reservados.</p>
+        </div>
+
+        <!-- Center: powered by -->
+        <div class="md:flex-1 text-center">
+          <p>Powered by <a href="https://github.com/BIGOSCAR85" class="hover:text-blue-400 ml-1">BIG85OSCAR</a></p>
+        </div>
+
+        <!-- Right: means of payment -->
+        <div class="flex gap-3 mt-2 md:mt-0 md:flex-1 justify-center md:justify-end">
+          <a href="#"><img src="./images/footer/american.png" alt="American" class="h-6 w-6 object-contain hover:scale-130 transition-transform duration-300" /></a>
+          <a href="#"><img src="./images/footer/mastercard.png" alt="Mastercard" class="h-6 w-6 object-contain hover:scale-130 transition-transform duration-300" /></a>
+          <a href="#"><img src="./images/footer/visa.png" alt="Visa" class="h-6 w-6 object-contain hover:scale-130 transition-transform duration-300" /></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 📜 Script -->
+  <script src="index.js"></script>
+</body>
+</html>
