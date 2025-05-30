@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Inventario</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+<body class="bg-sky-300 p-4">
+
+  <div class="max-w-7xl mx-auto">
+    <h1 class="text-3xl font-bold mb-4 text-center">Gestión de Inventario</h1>
+
+<form id="productoForm" class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-sky-200 p-4 rounded shadow mb-8">
+  <input type="hidden" id="productoId">
+
+  <!-- Información General -->
+  <h2 class="text-xl font-semibold col-span-full mt-4">Información General</h2>
+  <input type="text" id="nombre" placeholder="Nombre del Producto" class="p-2 border rounded" required>
+  <input type="text" id="descripcion" placeholder="Descripción" class="p-2 border rounded" required>
+  <input type="text" id="categoria" placeholder="Categoría" class="p-2 border rounded" required>
+  <input type="text" id="subcategoria" placeholder="Subcategoría" class="p-2 border rounded">
+  <input type="text" id="marca" placeholder="Marca" class="p-2 border rounded">
+  <input type="text" id="modelo" placeholder="Modelo" class="p-2 border rounded">
+  <input type="text" id="color" placeholder="Color" class="p-2 border rounded">
+  <input type="text" id="material" placeholder="Material" class="p-2 border rounded">
+  <input type="text" id="codigoBarras" placeholder="Código de Barras" class="p-2 border rounded">
+  <input type="text" id="estado" placeholder="Estado (Activo, Inactivo...)" class="p-2 border rounded">
+  <input type="text" id="tags" placeholder="Tags separados por comas" class="p-2 border rounded">
+
+  <!-- Precios y Stock -->
+  <h2 class="text-xl font-semibold col-span-full mt-4">Precios y Stock</h2>
+  <input type="number" id="precioCompra" placeholder="Precio de Compra" class="p-2 border rounded" step="0.01" required>
+  <input type="number" id="precioVenta" placeholder="Precio de Venta" class="p-2 border rounded" step="0.01" required>
+  <input type="number" id="costoEnvio" placeholder="Costo de Envío" class="p-2 border rounded" step="0.01">
+  <input type="number" id="cantidadStock" placeholder="Cantidad en Stock" class="p-2 border rounded" required>
+  <input type="number" id="cantidadMinima" placeholder="Cantidad Mínima" class="p-2 border rounded">
+  <input type="text" id="proveedor" placeholder="Proveedor" class="p-2 border rounded">
+
+  <!-- Fechas -->
+<h2 class="text-xl font-semibold col-span-full mt-4">Fechas</h2>
+
+<div class="flex flex-col">
+  <label for="fechaIngreso" class="mb-1 font-medium">Fecha de Ingreso</label>
+  <input type="date" id="fechaIngreso" class="p-2 border rounded" required>
+</div>
+
+<div class="flex flex-col">
+  <label for="fechaVencimiento" class="mb-1 font-medium">Fecha de Vencimiento</label>
+  <input type="date" id="fechaVencimiento" class="p-2 border rounded">
+</div>
+
+  <!-- Dimensiones y Peso -->
+  <h2 class="text-xl font-semibold col-span-full mt-4">Dimensiones y Peso (Si aplica)</h2>
+  <input type="number" id="peso" placeholder="Peso (kg)" class="p-2 border rounded" step="0.01">
+  <input type="number" id="largo" placeholder="Largo (cm)" class="p-2 border rounded">
+  <input type="number" id="ancho" placeholder="Ancho (cm)" class="p-2 border rounded">
+  <input type="number" id="alto" placeholder="Alto (cm)" class="p-2 border rounded">
+
+  <!-- Especificaciones Técnicas -->
+  <h2 class="text-xl font-semibold col-span-full mt-4">Especificaciones Técnicas (Si aplica)</h2>
+  <input type="text" id="capacidad" placeholder="Capacidad" class="p-2 border rounded">
+  <input type="text" id="voltaje" placeholder="Voltaje" class="p-2 border rounded">
+
+  <!-- Imágenes -->
+  <h2 class="text-xl font-semibold col-span-full mt-4">Imágenes</h2>
+  <input type="url" id="imagen1" placeholder="Imagen 1 (URL)" class="p-2 border rounded">
+  <input type="url" id="imagen2" placeholder="Imagen 2 (URL)" class="p-2 border rounded">
+
+  <!-- Notas -->
+  <h2 class="text-xl font-semibold col-span-full mt-4">Notas Adicionales</h2>
+  <textarea id="notas" placeholder="Notas adicionales" class="p-2 border rounded col-span-full"></textarea>
+
+  <!-- Botón -->
+      <button id="guardarBtn" type="button" class="bg-blue-600 text-white p-2 rounded col-span-full hover:bg-blue-700">
+  Guardar Producto
+</button>
+    </form>
+</form>
+  <div id="listaProductos" class="space-y-4"></div>
+</div>
+
+  <script src="index.js"></script>
+</body>
+</html>
