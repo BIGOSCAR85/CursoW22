@@ -1,0 +1,57 @@
+/*
+ * @file flipCard.css
+ * @description Estilos para tarjetas con efecto flip 3D. Incluye perspectiva, animaciones y estilos frontales y traseros de la tarjeta.
+ */
+
+/* Contenedor que aplica perspectiva para el efecto 3D */
+.perspective {
+  perspective: 1000px;
+}
+
+/* Tarjeta que contiene ambas caras y establece proporción */
+.flip-card {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  perspective: 1000px;
+}
+
+/* Contenedor interno que gira para mostrar la cara trasera */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* Al pasar el mouse, rota 180 grados en Y para mostrar el reverso */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Estilos compartidos para ambas caras de la tarjeta */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Oculta la cara trasera cuando no está visible */
+  border-radius: 0.5rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cara trasera con rotación, colores y estilos diferenciados */
+.flip-card-back {
+  transform: rotateY(180deg);
+  background-color: #fef3c7; /* Amarillo claro */
+  border: 1px solid #fbbf24; /* Amarillo */
+  color: #4b5563; /* Gris oscuro */
+  font-size: 1rem;
+  text-align: center;
+}
